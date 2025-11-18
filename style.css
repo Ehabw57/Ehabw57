@@ -17,6 +17,59 @@
   --ring: #222634;
 }
 
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .header-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex-container {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .cta {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .button {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .tag-list,
+[dir="rtl"] .pill-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .card-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .section-head {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  [dir="rtl"] .flex-container {
+    flex-direction: column;
+  }
+  
+  [dir="rtl"] .section-head {
+    flex-direction: column;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

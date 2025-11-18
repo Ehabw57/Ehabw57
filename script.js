@@ -30,6 +30,68 @@
   });
 })();
 
+// Language toggle
+(function () {
+  const root = document.documentElement;
+  const body = document.body;
+  const btn = document.getElementById("lang-toggle");
+  const key = "pref-lang";
+  
+  // Import translations dynamically
+  let translations = {};
+  
+  // Load translations from data.js
+  import('./data.js').then(module => {
+    translations = module.translations;
+    
+    // Get translation helper
+    function t(key, lang) {
+      const keys = key.split('.');
+      let value = translations[lang];
+      for (const k of keys) {
+        value = value?.[k];
+      }
+      return value || key;
+    }
+    
+    // Update all elements with data-i18n attribute
+    function updateContent(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = t(key, lang);
+      });
+      
+      // Re-render dynamic content (skills and projects)
+      if (window.renderSkills) window.renderSkills();
+      if (window.renderProjects) window.renderProjects();
+    }
+    
+    function applyLang(lang) {
+      if (lang === "ar") {
+        root.setAttribute("lang", "ar");
+        body.setAttribute("dir", "rtl");
+        btn && (btn.textContent = "English");
+      } else {
+        root.setAttribute("lang", "en");
+        body.setAttribute("dir", "ltr");
+        btn && (btn.textContent = "عربي");
+      }
+      updateContent(lang);
+    }
+    
+    const saved = localStorage.getItem(key);
+    applyLang(saved || "en");
+    
+    btn &&
+      btn.addEventListener("click", () => {
+        const current = root.getAttribute("lang") || "en";
+        const next = current === "ar" ? "en" : "ar";
+        applyLang(next);
+        localStorage.setItem(key, next);
+      });
+  });
+})();
+
 // Mobile nav toggle
 (function () {
   const nav = document.querySelector(".nav");
