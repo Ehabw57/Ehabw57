@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script type="module" src="module-script.js"></script>
+    <script src="https://kit.fontawesome.com/b132bd37bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div id="balk" class="header-inner">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><i class="fa-solid fa-bars"></i></button>
+            <a class="logo" href="#">Ehab Hegazy</a>
+            <nav class="nav nav-list" aria-label="Primary">
+                <ul id="nav-menu" class="nav nav-list">
+                    <li><a href="#" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="#work" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="lang-toggle" class="theme-toggle" title="Switch Language">عربي</button>
+            <button id="theme-toggle" class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="home" class="section">
+            <div class="container flex-container">
+                <div class="hero-text">
+                  <h1><span data-i18n="hero.greeting">Hi, I'm</span> <span class="accent" data-i18n="hero.name">Ehab Hegazy</span>.</h1>
+                  <p data-i18n="hero.description">Full-Stack Developer, I build scalable web apps with MEARN, Python and (SQL, non-SQL) DBs.</p>
+
+                    <div class="cta">
+                        <a class="button primary" href="#work" data-i18n="hero.myWork">My Work</a>
+                        <a class="button" href="#contact" data-i18n="hero.hireMe">Hire Me</a>
+                    </div>
+                </div>
+                <div class="hero-img visual"></div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container flex-container">
+                <div class="about-img visual"> </div>
+                <div class="about-text">
+                    <h2 data-i18n="about.title">About</h2>
+                    <p data-i18n="about.description">I'm Ehab, a passionate Full-Stack Web Developer with a deep love for programming and computer science. I thrive in the world of Linux and open-source technologies, constantly exploring systems at their core and experimenting hands-on. With a strong curiosity and an eagerness to learn, I'm always driven to discover new ideas, develop innovative solutions, and bring unique projects to life</p>
+                    <div class="cta">
+                        <a class="button" href="/assets/My_CV.pdf"><i class="fa-solid fa-circle-down"></i><span data-i18n="about.downloadCV">Download CV</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-head">
+              <h2 data-i18n="skills.title">Skills</h2>
+              <p data-i18n="skills.description">Here's an overview of the tools and skills I use to build my projects.</p>
+            </div>
+            <div id="skillsContainer"></div>
+        </section>
+
+        <section id="work" class="section">
+                <div class="section-head">
+                    <h2 data-i18n="projects.title">Projects</h2>
+                    <p data-i18n="projects.description">I enjoy turning ideas into real projects—here are some highlights.</p>
+                </div>
+                <div id="projects"class="grid">
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container flex-container">
+                <div class="contact-image visual"> </div>
+                <div class="contact-text">
+                  <h2 data-i18n="contact.title">Let's Connect</h2>
+                  <p data-i18n="contact.description">I'm always excited to discuss new opportunities, collaborations, or just chat about tech. Reach me through:</p>
+                    <ul class="contact-list">
+                        <li><a href="mailto:maestro.ehab123@gmail.com"><i class="fas fa-envelope"></i> <span data-i18n="contact.email">Email</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/ehababdelrady" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/Ehabw57" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://wa.me/+201551854079?text=Hi%20Ehab%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20work!" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="contact.whatsapp">WhatsApp</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <small data-i18n="footer.copyright">©2025 Ehab Hegazy</small>
+        </div>
+    </footer>
+    
+</body>
+</html>
