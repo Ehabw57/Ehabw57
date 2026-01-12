@@ -28,9 +28,9 @@ export const tags = [
 
 export const skillCategories = {
 	frontend: ["HTML5", "CSS3", "JavaScript", "React", "Angular", "Vue.js", "Bootstrap", "Tailwind CSS"],
-	backend: ["Node.js", "Express.js", "FastAPI", "Flask", "Python"],
+	backend: ["Node.js", "Express.js", "NestJs", "FastAPI", "Flask", "Python"],
 	database: ["MongoDB", "MySQL", "SQLite"],
-	tools: ["Linux", "Git", "Docker", "Bash", "C"]
+	tools: ["Linux", "Git", "Docker", "Bash"]
 };
 
 export const projects = [
@@ -39,7 +39,16 @@ export const projects = [
 		description: "A web application designed to assist with memorizing the Holy Quran through interactive typing practice",
 		image: "assets/QuranLink.png",
 		tags: ["Python", "FastAPI", "MySQL", "JavaScript", "Vue.js"],
-		github: "https://github.com/Ehabw57/QuranLink"
+		github: "https://github.com/Ehabw57/QuranLink",
+		live: "https://quranlink.vercel.app"
+	},
+	{
+		title: "itiHub",
+		description: "A collaborative platform for ITI students to share resources, projects, and connect with peers.",
+		image: "assets/itihub.png",
+		tags: ["Node.js", "MongoDB", "Express.js", "React", "Tailwind CSS"],
+		github: "https://github.com/Ehabw57/iti-hub",
+		live: "https://itihub.vercel.app"
 	},
 	{
 		title: "ALX Learning Bot",
@@ -95,7 +104,6 @@ export const translations = {
 			projects: "Projects",
 			contact: "Contact"
 		},
-		// Hero section
 		hero: {
 			greeting: "Hi, I'm",
 			name: "Ehab Hegazy",
@@ -103,13 +111,11 @@ export const translations = {
 			myWork: "My Work",
 			hireMe: "Hire Me"
 		},
-		// About section
 		about: {
 			title: "About",
 			description: "I'm Ehab, a passionate Full-Stack Web Developer with a deep love for programming and computer science. I thrive in the world of Linux and open-source technologies, constantly exploring systems at their core and experimenting hands-on. With a strong curiosity and an eagerness to learn, I'm always driven to discover new ideas, develop innovative solutions, and bring unique projects to life",
 			downloadCV: "Download CV"
 		},
-		// Skills section
 		skills: {
 			title: "Skills",
 			description: "Here's an overview of the tools and skills I use to build my projects.",
@@ -120,7 +126,6 @@ export const translations = {
 				tools: "Tools"
 			}
 		},
-		// Projects section
 		projects: {
 			title: "Projects",
 			description: "I enjoy turning ideas into real projects—here are some highlights.",
@@ -128,6 +133,10 @@ export const translations = {
 				{
 					title: "QuranLink",
 					description: "A web application designed to assist with memorizing the Holy Quran through interactive typing practice"
+				},
+				{
+					title: "itiHub",
+					description: "A collaborative platform for ITI students to share resources, projects, and connect with peers."
 				},
 				{
 					title: "ALX Learning Bot",
@@ -156,20 +165,17 @@ export const translations = {
 				demo: "Demo"
 			}
 		},
-		// Contact section
 		contact: {
 			title: "Let's Connect",
 			description: "I'm always excited to discuss new opportunities, collaborations, or just chat about tech. Reach me through:",
 			email: "Email",
 			whatsapp: "WhatsApp"
 		},
-		// Footer
 		footer: {
 			copyright: "©2025 Ehab Hegazy"
 		}
 	},
 	ar: {
-		// Navigation - الروابط
 		nav: {
 			home: "الرئيسية",
 			about: "نبذة عني",
@@ -177,7 +183,6 @@ export const translations = {
 			projects: "المشاريع",
 			contact: "تواصل معي"
 		},
-		// Hero section - القسم الرئيسي
 		hero: {
 			greeting: "مرحباً، أنا",
 			name: "إيهاب حجازي",
@@ -185,13 +190,11 @@ export const translations = {
 			myWork: "أعمالي",
 			hireMe: "وظفني"
 		},
-		// About section - نبذة عني
 		about: {
 			title: "نبذة عني",
 			description: "أنا إيهاب، مطور ويب متكامل شغوف بالبرمجة وعلوم الحاسوب. أزدهر في عالم لينكس وتقنيات المصادر المفتوحة، أستكشف الأنظمة من جذورها وأجرب بشكل عملي مستمر. بفضول قوي ورغبة دائمة في التعلم، أسعى دائماً لاكتشاف أفكار جديدة، وتطوير حلول مبتكرة، وإحياء مشاريع فريدة.",
 			downloadCV: "تحميل السيرة الذاتية"
 		},
-		// Skills section - المهارات
 		skills: {
 			title: "المهارات",
 			description: "نظرة عامة على الأدوات والمهارات التي أستخدمها لبناء مشاريعي.",
@@ -202,29 +205,31 @@ export const translations = {
 				tools: "الأدوات"
 			}
 		},
-		// Projects section - المشاريع
 		projects: {
 			title: "المشاريع",
 			description: "أستمتع بتحويل الأفكار إلى مشاريع حقيقية—إليك بعض الأمثلة البارزة.",
 			items: [
 				{
-					title: "QuranLink",
+					title: "رابط القرآن",
 					description: "تطبيق ويب مصمم للمساعدة في حفظ القرآن الكريم من خلال ممارسة الكتابة التفاعلية"
 				},
+				{title: "منصه معهد تكنولوجيا المعلومات",
+					description: "منصة تعاونية لطلاب معهد تكنولوجيا المعلومات لمشاركة الموارد والمشاريع والتواصل مع الزملاء"
+				},
 				{
-					title: "ALX Learning Bot",
+					title: "جامع المصادر بالذكاء الإصطناعي",
 					description: "تطبيق مدعوم بالذكاء الاصطناعي مصمم للبحث عن موارد التعلم وإنشاء اختبارات لموضوعات محددة"
 				},
 				{
-					title: "PlayBlocks",
+					title: "منصه تجارة ألعاب",
 					description: "موقع ألعاب تجارة إلكترونية قائم على المتصفح تم إنشاؤه بالكامل باستخدام HTML و CSS و JavaScript."
 				},
 				{
-					title: "Logger",
+					title: "المسجل",
 					description: "أداة سطر أوامر مصممة لإدارة سجلات الموظفين بكفاءة."
 				},
 				{
-					title: "Geometry Dodge",
+					title: "تفادي الأشكال",
 					description: "لعبة ويب ممتعة مبنية باستخدام HTML Canvas، حيث يتحكم اللاعب في مربع لتفادي الأشكال القادمة."
 				},
 				{
@@ -238,14 +243,12 @@ export const translations = {
 				demo: "عرض تجريبي"
 			}
 		},
-		// Contact section - تواصل معي
 		contact: {
 			title: "لنتواصل",
 			description: "أنا دائماً متحمس لمناقشة الفرص الجديدة، التعاونات، أو مجرد الدردشة عن التقنية. تواصل معي عبر:",
 			email: "البريد الإلكتروني",
 			whatsapp: "واتساب"
 		},
-		// Footer - تذييل
 		footer: {
 			copyright: "©2025 إيهاب حجازي"
 		}
